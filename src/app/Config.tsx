@@ -1,9 +1,4 @@
-import { lazy } from 'react' 
-import type { AppRouteConfig } from '@app/router' 
-const SamplePage = lazy(() => import('@modules/dashboard/pages/SamplePage'))
-const DashboardPage = lazy(() => import('@modules/dashboard/pages/DashboardPage')) 
-const LoginPage = lazy(() => import('@modules/auth/pages/LoginPage'))
-
+import type { AppRouteConfig } from '@app/router'
 
 export const appRouteConfig: AppRouteConfig = {
   protectedRoutes: [
@@ -11,9 +6,5 @@ export const appRouteConfig: AppRouteConfig = {
   ],
   guestRoutes: [
     { path: '/auth/login', element: <LoginPage /> },
-     { path: '/sample', element: <SamplePage /> },
-  ],
-  publicRoutes: [
-   
   ],
 }
