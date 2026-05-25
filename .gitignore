@@ -13,6 +13,19 @@ dist-ssr
 *.local
 *.env.*
 
+# Vite pre-bundle cache (can contain stale dependency scans)
+node_modules/.vite
+
+# Strict TS-only policy: src/ must never contain plain JS/JSX
+src/**/*.js
+src/**/*.jsx
+src/**/*.js.map
+src/**/*.jsx.map
+
+# Generated patch artefacts
+foundation.diff
+*.patch
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

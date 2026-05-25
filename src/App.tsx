@@ -1,10 +1,16 @@
+import { AppProviders } from '@app/providers'
+import { AppRouter } from '@app/router'
+import { appRouteConfig } from './app/Config'
 
-function App() {
+/**
+ * Foundation entry point. Host products extend by passing an `AppRouteConfig`
+ * (route config) through to `<AppRouter>`. See usecase.md → "Adding New Routes"
+ * and "Creating a New Module" for the canonical extension patterns.
+ */
+export default function App() {
   return (
-    
-      <div className="App">Hello, World!</div>
-    
+    <AppProviders>
+      <AppRouter config={appRouteConfig}/>
+    </AppProviders>
   )
 }
-
-export default App
