@@ -1,6 +1,6 @@
 import { AppProviders } from '@app/providers'
 import { AppRouter } from '@app/router'
-import { appRouteConfig } from './app/Config'
+import { appRouteConfig } from './app/config'
 
 /**
  * Foundation entry point. Host products extend by passing an `AppRouteConfig`
