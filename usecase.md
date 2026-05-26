@@ -290,7 +290,14 @@ Pass it through to `App.tsx`:
 </AppProviders>
 ```
 
-Behind the scenes `buildRoutes(config)` automatically:
+### src\app\router\types.ts
+layouts?: {
+    public?: ReactNode
+    guest?: ReactNode
+    protected?: ReactNode
+  }
+  
+### Behind the scenes `buildRoutes(config)` automatically:
 - wraps `protectedRoutes` in `<ProtectedRoute>` + `<AppShell>`
 - wraps `guestRoutes` in `<GuestRoute>` + `<AuthLayout>`
 - wraps `publicRoutes` in `<PublicLayout>`
